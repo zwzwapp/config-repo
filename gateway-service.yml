@@ -24,6 +24,7 @@ spring:
       bindings: 
         merchandising:
           destination: merchandising
+          content-type: application/json
        
 eureka:
   client:
