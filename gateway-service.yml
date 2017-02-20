@@ -18,6 +18,12 @@ zuul:
 
 spring:
   profiles: dev
+  
+  cloud:
+    stream: 
+      bindings: 
+        merchandising:
+          destination: merchandising
        
 eureka:
   client:
