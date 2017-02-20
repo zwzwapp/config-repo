@@ -10,7 +10,14 @@ eureka:
 
 spring:
   profiles: dev
-   
+  
+  cloud:
+    stream: 
+      bindings: 
+        input:
+          destination: merchandising
+          content-type: application/json
+          
   data:
     mongodb:
       uri: mongodb://192.168.99.100:27017
