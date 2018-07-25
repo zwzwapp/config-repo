@@ -1,7 +1,6 @@
 
 eureka:
   instance:
-    hostname: localhost
     metadataMap:
       zone: zone1
   client:
