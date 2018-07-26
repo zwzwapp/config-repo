@@ -1,10 +1,10 @@
 eureka:
   instance:
-    hostname: localhost
+    hostname: peer2
     metadataMap:
       zone: zone2
   client:
     serviceUrl:
-      defaultZone: http://zone1/eureka/
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8763/eureka/
 server:  
   port: ${PORT:8762}
