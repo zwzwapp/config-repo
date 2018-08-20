@@ -1,0 +1,20 @@
+server:  
+  port: ${PORT:8762}
+
+eureka:
+  instance:
+    hostname: peer2
+    metadataMap:
+      zone: zone2
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://guest:guest@localhost:8761/eureka/
+
+  
+spring:  
+  security:
+    user:
+      name: guest
+      password: guest
