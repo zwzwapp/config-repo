@@ -10,3 +10,10 @@ eureka:
 server:  
   port: ${PORT:8761}
   
+security:
+    user:
+      name: guest 
+      password: guest  
+  
+  
+  
