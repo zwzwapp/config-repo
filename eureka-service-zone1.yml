@@ -1,14 +1,15 @@
+server:  
+  port: ${PORT:8761}
 
 eureka:
   instance:
-    hostname: peer1
-    metadataMap:
-      zone: zone1
+    hostname: localhost
   client:
+    registerWithEureka: false
+    fetchRegistry: false
     serviceUrl:
-      defaultZone: http://localhost:8762/eureka/,http://localhost:8763/eureka/
-server:  
-  port: ${PORT:8761}
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
   
 spring:  
   security:
