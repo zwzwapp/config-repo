@@ -8,3 +8,10 @@ eureka:
       defaultZone: http://localhost:8761/eureka/,http://localhost:8763/eureka/
 server:  
   port: ${PORT:8762}
+  
+spring:  
+  security:
+    user:
+      name: guest 
+      password: guest   
+  
