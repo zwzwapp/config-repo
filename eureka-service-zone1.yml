@@ -3,12 +3,14 @@ server:
 
 eureka:
   instance:
-    hostname: localhost
+    hostname: peer1
+    metadataMap:
+      zone: zone1
   client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://guest:guest@${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://guest:guest@localhost:8762/eureka/
 
   
 spring:  
