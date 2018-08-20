@@ -14,8 +14,8 @@ eureka:
 spring:  
   security:
     user:
-      name: guest 
-      password: guest  
+      name: guest
+      password: guest
   
   
   
