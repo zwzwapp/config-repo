@@ -10,7 +10,8 @@ eureka:
 server:  
   port: ${PORT:8761}
   
-security:
+spring:  
+  security:
     user:
       name: guest 
       password: guest  
