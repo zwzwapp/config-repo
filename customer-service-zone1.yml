@@ -3,6 +3,11 @@ server:
 
 eureka:
   client:
+    prefer-same-zone-eureka: true
     service-url:
       defaultZone: http://guest:guest@localhost:8761/eureka
+  instance:
+    metadata-map:
+      zone: zone1      
+      
   
