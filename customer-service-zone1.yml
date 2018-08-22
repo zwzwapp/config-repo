@@ -17,8 +17,12 @@ spring:
     username: guest
     password: guest
     
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+    
 management:
   endpoints:
     web:
       exposure:
-        include: bus-env, bus-refresh   
+        include: bus-env, bus-refresh     
