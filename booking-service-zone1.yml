@@ -1,0 +1,29 @@
+server:
+  port: ${PORT:8089}    
+
+eureka:
+  client:
+    prefer-same-zone-eureka: true
+    service-url:
+      defaultZone: http://guest:guest@localhost:8761/eureka, http://guest:guest@localhost:8762/eureka
+  instance:
+    metadata-map:
+      zone: zone1      
+      
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: customerdb
+      
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-env, bus-refresh   
