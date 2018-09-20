@@ -23,23 +23,18 @@ spring:
           enabled: true
           
       routes:
-      - id: combo-service
-        uri: lb://COMBO-SERVICE
+      - id: customer-service
+        uri: lb://CUSTOMER-SERVICE
         predicates:
-        - Path= /api/**
+        - Path= /customer/**
         filters:
-        - RewritePath= /api/(?<segment>.*), /$\{segment}
+        - RewritePath= /customer/(?<segment>.*), /$\{segment}
        
-      - id: catalog-service     
-        uri: lb://CATALOG-SERVICE
+      - id: booking-service     
+        uri: lb://BOOKING-SERVICE
         predicates:
-        - Path= /product/**
+        - Path= /booking/**
         filters:
-        - RewritePath= /product/(?<path>.*), /$\{path}  
+        - RewritePath= /booking/(?<path>.*), /$\{path}  
         
-      - id: inventory-service   
-        uri: lb://INVENTORY-SERVICE
-        predicates:
-        - Path= /inventory/**
-        filters:
-        - RewritePath= /inventory/(?<path>.*), /$\{path}  
+     
