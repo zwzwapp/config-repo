@@ -1,10 +1,11 @@
 eureka:
-  instance:
-    metadataMap:
-      zone: zone1
   client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+    prefer-same-zone-eureka: true
+    service-url:
+      defaultZone: http://guest:guest@localhost:8761/eureka, http://guest:guest@localhost:8762/eureka
+  instance:
+    metadata-map:
+      zone: zone1
       
 server:  
   port: ${PORT:8080}
